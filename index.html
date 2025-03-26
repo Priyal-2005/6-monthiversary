@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop autoplay>
+        <source src="your-music-file.mp3" type="audio/mp3">
+    </audio>
+    <button id="music-control">🔊 Play Music</button>
+
+    <div class="container">
+        <h1>Happy 6 Months, My Love! 💖</h1>
+        <p>You are the best thing that ever happened to me. Every moment with you is magical! ✨</p>
+        
+        <!-- Image Gallery with Flip Effect -->
+        <div class="gallery">
+            <div class="card" onclick="flipCard(this, 0)"><img src="./images/img2.jpg" alt="Love"></div>
+            <div class="card" onclick="flipCard(this, 1)"><img src="./images/img3.jpg" alt="Forever"></div>
+            <div class="card" onclick="flipCard(this, 2)"><img src="./images/img4.jpg" alt="Memories"></div>
+            <div class="card" onclick="flipCard(this, 3)"><img src="./images/img5.jpg" alt="Together"></div>
+            <div class="card" onclick="flipCard(this, 4)"><img src="./images/img6.jpg" alt="Happiness"></div>
+            <div class="card" onclick="flipCard(this, 5)"><img src="./images/img7.jpg" alt="Us Again"></div>
+        </div>
+
+        <!-- Romantic Message -->
+        <p class="quote">"Every love story is beautiful, but ours is my favorite!" 💕</p>
+
+        <!-- Love Letter Section -->
+        <div class="love-letter-container">
+            <div class="rolled-letter" onclick="unrollLetter()">📜 Click to Unroll</div>
+            <div class="unrolled-letter">
+                <p>My Love,</p>
+                <p>Six months ago, you changed my life in the most beautiful way. Every moment with you has been a fairytale, and every heartbeat of mine beats just for you.</p>
+                <p>Through every smile, every touch, and every word, you’ve made my world brighter. I promise to cherish and love you endlessly, forever and always. 💖</p>
+                <p>Yours forever,</p>
+                <p><strong>Your Love</strong></p>
+            </div>
+        </div>        
+    </div>
+
+    <!-- Floating Hearts Animation -->
+    <div class="hearts-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
