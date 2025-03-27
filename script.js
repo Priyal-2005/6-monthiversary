@@ -118,6 +118,12 @@ document.addEventListener("DOMContentLoaded", function () {
             rolledLetter.style.display = "block";
             rolledLetter.classList.remove("fade-out");
             rolledLetter.classList.add("fade-in");
+
+            // Scroll to the top when closing the letter
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }, 300);
     }
 

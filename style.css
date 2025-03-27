@@ -42,7 +42,7 @@ p {
 /* Image Cards */
 .card {
     width: 200px;
-    height: 220px;
+    height: 300px;
     perspective: 1200px;
     cursor: pointer;
     position: relative;
@@ -103,7 +103,7 @@ p {
 
 /* Music Button */
 #music-control {
-    /* position: fixed;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     padding: 12px 18px;
@@ -114,8 +114,7 @@ p {
     cursor: pointer;
     font-size: 16px;
     transition: 0.3s;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); */
-    display: none;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #music-control:hover {
