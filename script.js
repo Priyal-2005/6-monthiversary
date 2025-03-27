@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!document.getElementById("close-letter")) {
             const closeButton = document.createElement("button");
             closeButton.id = "close-letter";
-            closeButton.innerText = "❌ Close";
+            closeButton.innerText = "Close";
             closeButton.classList.add("close-btn");
 
             closeButton.addEventListener("click", function () {
