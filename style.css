@@ -11,6 +11,7 @@ body {
     padding: 0;
     min-height: 100vh;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Heading - Romantic Feel */
@@ -113,7 +114,7 @@ p {
     border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.3s;
+    transition: bottom 0.3s ease-in-out;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -194,6 +195,94 @@ p {
 
 .close-btn:hover {
     background: #ff1a40;
+}
+
+.secret-message-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.question, .riddle {
+    font-size: 18px;
+    color: #d63384; /* Romantic pink color */
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 2px solid #d63384;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff4d6d;
+    box-shadow: 0 0 8px rgba(255, 77, 109, 0.6);
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d63384;
+}
+
+/* Ensure error message visibility with fade-in effect */
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+Styling for Try Again button
+.try-again-btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.try-again-btn:hover {
+    background-color: #d63384;
+    transform: scale(1.05);
+}
+
+.hidden-message {
+    display: none;
+    font-size: 18px;
+    color: #d63384;
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 /* Smooth Fade-in Effect */

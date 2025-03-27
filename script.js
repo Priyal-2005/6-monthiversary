@@ -136,4 +136,67 @@ document.addEventListener("DOMContentLoaded", function () {
             rollLetter();
         }
     });
+
+    const unlockButton = document.getElementById("unlock-button");
+    if (!unlockButton) {
+        console.error("Unlock button not found.");
+        return;
+    }
+    unlockButton.addEventListener("click", function () {
+        checkAnswer(); // Ensure function call matches exact function name
+    });
 });
+
+function checkAnswer() {
+    console.log("Searching for input fields and elements...");
+    const answerInput1 = document.getElementById("answer1");
+    const answerInput2 = document.getElementById("answer2");
+    const secretMessage = document.getElementById("secret-message");
+    const errorMessage = document.getElementById("error-message");
+    const unlockButton = document.getElementById("unlock-button");
+
+    if (!answerInput1 || !answerInput2 || !secretMessage || !errorMessage) {
+        console.error("One or more required elements (answer inputs, secret message, or error message) are missing.");
+        errorMessage.innerText = "Something went wrong! Please refresh and try again.";
+        errorMessage.style.display = "block";
+        return;
+    }
+
+    const correctAnswer1 = "Blue mini dress";
+    const correctAnswer2 = "12 dec"; 
+
+    const userAnswer1 = answerInput1.value.trim().toLowerCase();
+    const userAnswer2 = answerInput2.value.trim().toLowerCase();
+
+    if (!userAnswer1 || !userAnswer2) {
+        errorMessage.innerText = "Please enter both answers!";
+        errorMessage.style.display = "block";
+        unlockButton.innerText = "Unlock 💖";
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
+        return;
+    }
+
+    if (userAnswer1 === correctAnswer1.toLowerCase() && userAnswer2 === correctAnswer2.toLowerCase()) {
+        secretMessage.style.display = "block";
+        const musicButton = document.getElementById("music-control");
+        if (musicButton) {
+            musicButton.style.bottom = "60px"; // Adjust position to avoid overlap
+        } else {
+            console.warn("Music control button not found.");
+        }
+        errorMessage.style.display = "none";
+    } else {
+        errorMessage.innerText = "Nope! That's not it. Try again, love! 😘";
+        errorMessage.style.display = "block";
+        unlockButton.innerText = "Unlock 💖";
+    }
+
+    // Scroll to the bottom of the page in both cases
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}

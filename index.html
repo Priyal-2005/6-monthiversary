@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momo 💗</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -44,11 +45,42 @@
                 <p>Yours, forever and always 💗😘</p>
             </div>
         </div>        
+
+        <!-- Secret Message Section -->
+        <div id="secret-container" class="secret-message-container">
+            <p class="question">To unlock your secret message, answer these:</p>
+
+            <p class="riddle">What was I wearing for our second date? 😜</p>
+            <input type="text" id="answer1" placeholder="Enter your answer...">
+
+            <p class="riddle">When and where was our first kiss? 😘</p>
+            <input type="text" id="answer2" placeholder="Enter your answer...">
+
+            <button id="unlock-button" onclick="checkAnswer()">Unlock 💖</button>
+
+            <div id="message-container">
+                <p id="secret-message" class="hidden-message">You are the best thing that ever happened to me. Every moment with you is a treasure, and every heartbeat of mine whispers your name. No matter what happens, my love for you will always shine the brightest. 💖</p>
+                <p id="error-message" class="error-message"></p>
+            </div>
+        </div>
     </div>
 
     <!-- Floating Hearts Animation -->
     <div class="hearts-container"></div>
 
     <script src="script.js"></script>
+    <script>
+        function scrollToBottom() {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        // Call this function when an error message is displayed or the secret message is unlocked
+        document.getElementById('unlock-button').addEventListener('click', function() {
+            // Assuming checkAnswer function will handle the display of error message or secret message
+            if (document.getElementById('error-message').innerText) {
+                scrollToBottom();
+            }
+        });
+    </script>
 </body>
 </html>
