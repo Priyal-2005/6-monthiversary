@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const messages = [
         "You are my first and last thought every day! ❤️",
         "Every heartbeat of mine whispers your name. 💞",
-        "You are the light in my darkest days. ✨",
         "Your love is the sweetest melody in my heart. 🎶",
+        "You are the light in my darkest days. ✨",
         "With you, every moment feels like magic. 💖",
         "You complete the missing pieces of my heart. 🧩",
         "Forever isn’t long enough with you. 💕"
